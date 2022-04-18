@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/TarasovArtem/Pug/issues"
   },
-  "homepage": "https://github.com/TarasovArtem/Pug#readme"
+  "homepage": "https://github.com/TarasovArtem/Pug#readme",
+  "dependencies": {
+    "cypress": "^9.5.4"
+  }
 }
