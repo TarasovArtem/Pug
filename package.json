@@ -4,7 +4,10 @@
   "description": "Actions",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cypress run",
+    "test:todo:cy": "cypress run --spec cypress/integration/1-getting-started/**" 
+
+    
   },
   "repository": {
     "type": "git",
