@@ -1,0 +1,35 @@
+# -----------------------------------
+#
+#              --FIRST TESTS--
+#
+#------------------------------------
+name: First_test
+
+on: 
+  push: 
+    branches:
+      - test
+
+jobs:
+  First_test: 
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Print message
+      run:  echo "First test"
+
+  Test: 
+    
+    runs-on: ubuntu-latest
+
+    steps:
+    #- uses: actions/setup-node@v2.1.3
+    - uses: actions/checkout@v3
+    - name: npm install 
+      run:  npm ci
+    - name: cypress test
+      run:  npm run test:todo:cy
+
+
