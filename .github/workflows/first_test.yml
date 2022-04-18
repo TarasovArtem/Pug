@@ -8,7 +8,7 @@ name: First_test
 on: 
   push: 
     branches:
-      - test
+      - master, test
 
 jobs:
   First_test: 
@@ -25,7 +25,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    #- uses: actions/setup-node@v2.1.3
     - uses: actions/checkout@v3
     - name: npm install 
       run:  npm ci
