@@ -8,7 +8,7 @@ name: First_test
 on: 
   push: 
     branches:
-      - master
+      - master, test
 
 jobs:
   First_test: 
@@ -16,5 +16,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: actions/checkout@v3
     - name: Print message
-      run: echo "First test"
+      run:  echo "First test"
+    - name: npm install 
+      run:  npm ci
+    - name: cypress test
+      run:  npm run test:todo:cy
+
+
