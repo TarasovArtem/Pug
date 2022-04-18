@@ -23,8 +23,9 @@ jobs:
   Test: 
     
     runs-on: ubuntu-latest
-    
+
     steps:
+    - uses: actions/setup-node@v5
     - name: npm install 
       run:  npm ci
     - name: cypress test
